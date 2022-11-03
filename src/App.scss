@@ -1,48 +1,77 @@
 .App {
-  text-align: center;
-}
+  //text-align: center;
+  font-family: 'Amiko';
 
+  .App-header {
+    /* Header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    //gap: 10px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    position: relative;
+    //width: 1440px;
+    width: 100vw;
+    height: 80px;
 
-.App-header {
-  /* Header */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  gap: 10px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  position: relative;
-  width: 1440px;
-  height: 80px;
+    .App-logo {
+      height: 100%;
+      pointer-events: none;
+    }
 
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  .App-logo {
-    height: 100%;
-    pointer-events: none;
   }
 
-}
+  .body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .content-header {
+      h2 {
+        margin: 0;
+        width: 200px;
+        height: 60px;
+
+        //font-family: 'Amiko';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 60px;
+        /* identical to box height */
+
+        letter-spacing: 0.2em;
+
+        color: #000000;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+
+      .custom-border-yellow {
+        width: 200px;
+        height: 0px;
+
+        border: 5px solid #FFEA00;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+
+      }
+    }
 
 
-
-.App-link {
-  color: #61dafb;
-}
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-
-  to {
-    transform: rotate(360deg);
-  }
-} */
+}
