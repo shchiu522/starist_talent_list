@@ -1,19 +1,9 @@
 // import logo from './logo.svg';
 import './App.scss';
-import staristLogo from './assets/starist_logo1.png';
-import { Component, useState } from "react";
+import { useState } from "react";
 import { TalentList } from './TalentList';
 import Dropdown from './Dropdown';
-// const startistLogo = require('./assets/starist_logo1.png');
-
-class Header extends Component {
-  render() {
-    return <header className="App-header">
-      <img src={staristLogo} className="App-logo" alt="logo" />
-    </header>;
-  }
-}
-
+import { Header } from './Header';
 function ContentHeader() {
   return <div className={"content-header"}>
     <div>
