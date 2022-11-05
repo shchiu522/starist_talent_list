@@ -152,7 +152,7 @@
           flex-grow: 0;
 
           h3,
-          h5 {
+          span {
             flex: 1 1 100%;
           }
 
@@ -182,30 +182,42 @@
             flex-grow: 0;
           }
 
-          h5 {
-            width: 320px;
-            height: 27px;
+          span {
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-between;
+        
+            h5 {
+              margin: 0;
 
-            /* Body/body */
+              width: 320px;
+              height: 27px;
 
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 26px;
-            /* identical to box height, or 165% */
+              /* Body/body */
 
-
-            /* Blacks/Mid emphasis */
-
-            color: #718797;
+              font-family: 'Inter';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 26px;
+              /* identical to box height, or 165% */
 
 
-            /* Inside auto layout */
+              /* Blacks/Mid emphasis */
 
-            flex: none;
-            order: 1;
-            flex-grow: 0;
+              color: #718797;
+
+
+              /* Inside auto layout */
+
+              flex: none;
+              order: 1;
+              flex-grow: 0;
+
+            }
+            svg {
+              order:2;
+            }
 
           }
         }
