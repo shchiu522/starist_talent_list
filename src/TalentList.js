@@ -13,9 +13,11 @@ export const TalentList = (props) => {
 
 
 const Talent = (props) => (<div key={props.item} className='talent-item'>
-  <h3>王曉霖</h3>
-  <h5>
-    Viu - Tobot - 奧花
-  </h5>
+  <div className='text-container'>
+    <h3>王曉霖</h3>
+    <h5>
+      Viu - Tobot - 奧花
+    </h5>
+  </div>
   <img src={arrow}></img>
 </div>);
