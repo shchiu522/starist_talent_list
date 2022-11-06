@@ -1,17 +1,14 @@
 import arrow from './assets/arrow.svg';
+import { GENDER_FEMALE, GENDER_MALE } from "./constant";
 
 export const TalentList = (props) => {
 
   return (
     <div className='talent-list-container'>
-      {props.talent.map(i => (
-        <Talent item={i} />
-      ))}
+      {props.children}
     </div>
   );
 };
-
-
 
 function BlueArrow() {
   return (<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,15 +16,22 @@ function BlueArrow() {
   </svg>);
 }
 
+function PinkArrow() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10 20C10 19.6685 10.1317 19.3505 10.3661 19.1161C10.6005 18.8817 10.9185 18.75 11.25 18.75H25.7325L20.365 13.385C20.1303 13.1503 19.9984 12.8319 19.9984 12.5C19.9984 12.1681 20.1303 11.8497 20.365 11.615C20.5997 11.3803 20.9181 11.2484 21.25 11.2484C21.5819 11.2484 21.9003 11.3803 22.135 11.615L29.635 19.115C29.7514 19.2311 29.8438 19.369 29.9068 19.5209C29.9698 19.6728 30.0022 19.8356 30.0022 20C30.0022 20.1644 29.9698 20.3272 29.9068 20.4791C29.8438 20.6309 29.7514 20.7689 29.635 20.885L22.135 28.385C21.9003 28.6197 21.5819 28.7516 21.25 28.7516C20.9181 28.7516 20.5997 28.6197 20.365 28.385C20.1303 28.1503 19.9984 27.8319 19.9984 27.5C19.9984 27.1681 20.1303 26.8497 20.365 26.615L25.7325 21.25H11.25C10.9185 21.25 10.6005 21.1183 10.3661 20.8839C10.1317 20.6495 10 20.3315 10 20Z" fill="#F19EC2" />
+    </svg>
+  );
 
-const Talent = (props) => (<div key={props.item} className='talent-item'>
-  <div className='text-container'>
+}
+export const Talent = (props) => (<div key={props.item} className='talent-item'>
+  <div className='text-container' style={{ cursor: "pointer" }} onClick={props.onClick}>
     <h3>王曉霖</h3>
     <span>
       <h5>
         Viu - Tobot - 奧花
       </h5>
-      <BlueArrow />
+      {props.gender === GENDER_FEMALE ? <PinkArrow /> : <BlueArrow />}
       {/* <img src={arrow}></img> */}
     </span>
   </div>

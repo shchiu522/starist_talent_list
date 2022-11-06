@@ -60,19 +60,24 @@
         flex-grow: 0;
       }
 
-      .custom-border-yellow {
+      .custom-border {
         width: 200px;
         height: 0px;
-
-        border: 2px solid #FFEA00;
-
-        /* Inside auto layout */
 
         flex: none;
         order: 1;
         align-self: stretch;
         flex-grow: 0;
 
+        &.yellow {
+          border: 2px solid #FFEA00;
+        }
+        &.blue {
+          border: 2px solid #91CDF1;
+        }
+        &.pink {
+          border: 2px solid #F19EC2;
+        }
       }
 
       .dropdown {
@@ -105,8 +110,9 @@
           /* identical to box height */
           color: #666666;
         }
+
         .dropdown-items {
-          box-sizing:border-box;
+          box-sizing: border-box;
           position: relative;
           border: 0px;
           background-color: #FFFFFF;
@@ -270,5 +276,32 @@
       }
 
     }
+
+    .content-title {
+
+      font-family: 'Amiko';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 53px;
+      letter-spacing: 0.1em;
+
+      color: #000000;
+
+    }
+
+    .content-detail {
+
+      font-family: 'Amiko';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      letter-spacing: 0.1em;
+
+      color: #000000;
+
+    }
+
   }
 }
