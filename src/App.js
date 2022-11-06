@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.scss';
 import { useState } from "react";
-import { TalentList, Talent } from './TalentList';
+import { ContentList, Talent } from './TalentList';
 import Dropdown from './Dropdown';
 import { Header } from './Header';
 import { ContentDetail, ContentTitle, AudioDetail } from './TalentDetail';
@@ -60,25 +60,27 @@ function App() {
           ? (<>
             <DetailHeader name={"王曉霖"} />
             <AudioDetail audio={[1, 2]} />
-            <ContentTitle text={'Viu'} />
-            <ContentDetail text={text1} />
-            <ContentTitle text={'綜藝'} />
-            <ContentDetail text={'生活小貼士/柳原可奈子'} />
-            <ContentTitle text={'劇集'} />
-            <ContentDetail text={'警視廳生物系/三笠彌生 \n Andante/李靜秀、秀彬\n 偵探物語 SP/新井直美'} />
-            <ContentTitle text={'廣播劇'} />
-            <ContentDetail text={'偽裝學渣/許晴晴\n 香港電台 蜂蜜學園/工蜂之星\n 我的鱷魚朋友 /Rita'} />
-            <ContentTitle text={'香港電台'} />
-            <ContentDetail text={'蜂蜜學園/工蜂之星\n 我的鱷魚朋友 /Rita'} />
+            <ContentList >
+              <ContentTitle text={'Viu'} />
+              <ContentDetail text={text1} />
+              <ContentTitle text={'綜藝'} />
+              <ContentDetail text={'生活小貼士/柳原可奈子'} />
+              <ContentTitle text={'劇集'} />
+              <ContentDetail text={'警視廳生物系/三笠彌生 \n Andante/李靜秀、秀彬\n 偵探物語 SP/新井直美'} />
+              <ContentTitle text={'廣播劇'} />
+              <ContentDetail text={'偽裝學渣/許晴晴\n 香港電台 蜂蜜學園/工蜂之星\n 我的鱷魚朋友 /Rita'} />
+              <ContentTitle text={'香港電台'} />
+              <ContentDetail text={'蜂蜜學園/工蜂之星\n 我的鱷魚朋友 /Rita'} />
+            </ContentList>
           </>
           ) :
           (<>
             <ContentHeader />
-            <TalentList >
+            <ContentList >
               {talent.map(i => (
                 <Talent item={i} onClick={talentOnClick} gender={GENDER_FEMALE} />
               ))}
-            </TalentList >
+            </ContentList >
           </>
           )}
       </MainContent>

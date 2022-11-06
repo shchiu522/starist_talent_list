@@ -1,6 +1,6 @@
 import { GENDER_FEMALE, GENDER_MALE } from "./constant";
 
-export const TalentList = (props) => {
+export const ContentList = (props) => {
   return (
     <div className='talent-list-container'>
       {props.children}
