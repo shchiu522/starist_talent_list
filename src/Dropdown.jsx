@@ -36,8 +36,8 @@ const Dropdown = () => {
                 className={`dropdown-items ${dropdownState ? "isVisible" : "isHidden"
                     }`}
             >
-                {dropdownValue.map((i) => (
-                    <div key={i.value} className="dropdown-item">
+                {dropdownValue.map((i, index) => (
+                    <div key={index} className="dropdown-item">
                         <div
                             className="dropdown__link"
                             onClick={() => handleSetDropdownValue(i)}
@@ -50,15 +50,6 @@ const Dropdown = () => {
 
                     </div>
                 ))}
-                {/*                 
-                <div className="dropdown-item">
-                    <div
-                        className="dropdown__link"
-                        onClick={() => handleSetDropdownValue("value 02")}
-                    >
-                        Item 02
-                    </div>
-                </div> */}
             </div>
         </div>
     );

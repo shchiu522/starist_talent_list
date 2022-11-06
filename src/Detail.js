@@ -16,3 +16,11 @@ export function ContentDetail(props) {
   </p>);
 }
 
+
+export function AudioDetail(props) {
+  return (<p className="content-detail">
+    {props.audio.map((i, key) => {
+      return key == 0 ? <span key={key}>Audio {key + 1}</span> : <span key={key}> | Audio {key + 1}</span>;
+    })}
+  </p>);
+}

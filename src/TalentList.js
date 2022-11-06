@@ -27,7 +27,7 @@ function PinkArrow() {
 
 export const Talent = (props) => (
   <div key={props.item} onClick={props.onClick} className='talent-item'>
-    <div className='text-container' style={{ cursor: "pointer" }} >
+    <div className='text-container'>
       <h3>王曉霖</h3>
       <span>
         <h5>
@@ -37,4 +37,5 @@ export const Talent = (props) => (
         {/* <img src={arrow}></img> */}
       </span>
     </div>
-  </div>);
+  </div>
+);
