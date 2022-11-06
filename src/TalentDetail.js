@@ -29,9 +29,9 @@ export function AudioDetail(props) {
     <p className="content-detail">
       {props.audio.map((i, key) => {
         return key == 0
-          ? <span onClick={handleAudioOnClick} key={key}>Audio {key + 1}</span>
+          ? <span style={{ cursor: "pointer" }} onClick={handleAudioOnClick} key={key}>Audio {key + 1}</span>
           : (<>
-            <span> | </span> <span onClick={handleAudioOnClick} key={key}> Audio {key + 1}</span>;
+            <span> | </span> <span style={{ cursor: "pointer" }} onClick={handleAudioOnClick} key={key}> Audio {key + 1}</span>;
           </>)
       })}
       {isOpen ? <AudioOverly handleOverlayOnClick={handleAudioOnClick} /> : null}
