@@ -7,8 +7,7 @@ import { Header } from './Header';
 import { ContentDetail, ContentTitle } from './Detail';
 import { GENDER_FEMALE } from './constant';
 
-
-const text1 = `Tobot機器戰士 S1/奥花、歷森 \n魔幻陀螺1亞特\n 魔幻陀螺4/韓躍 \n動感火車家族/米歇爾、絲提拉、 Thomas\n 動感火車家族2/米歇爾、絲提拉、鐵路 仔 Thomas\n 魔法俏公主 /jouju \n魔法俏公主之來自星星的女神 S1/jouju\n 魔法俏公主之來自星星的女神 S2/ouiu\n 熊熊樂園S1/紫羅䕡\n 熊熊樂園 S2/紫羅蘭\n 有營俠大冒險/Olie媽媽 \n芭比夢幻屋冒險旅程 2/黛茜高斯珮洛斯 \n積木戰士 /蜂須賀忠希\n 衝鋒力奇/戴娜、達沙 \n小巴士 Tayo/Trammy Nuri`;
+const text1 = `Tobot機器戰士 S1/奥花、歷森 \n魔幻陀螺1/亞特\n 魔幻陀螺4/韓躍 \n動感火車家族/米歇爾、絲提拉、 Thomas\n 動感火車家族2/米歇爾、絲提拉、鐵路 仔 Thomas\n 魔法俏公主 /jouju \n魔法俏公主之來自星星的女神 S1/jouju\n 魔法俏公主之來自星星的女神 S2/ouiu\n 熊熊樂園S1/紫羅䕡\n 熊熊樂園 S2/紫羅蘭\n 有營俠大冒險/Olie媽媽 \n芭比夢幻屋冒險旅程 2/黛茜高斯珮洛斯 \n積木戰士 /蜂須賀忠希\n 衝鋒力奇/戴娜、達沙 \n小巴士 Tayo/Trammy Nuri`;
 
 function ContentHeader() {
   return <div className={"content-header"}>
@@ -17,7 +16,6 @@ function ContentHeader() {
       <div className={`custom-border yellow`}></div>
     </div>
     <Dropdown />
-
   </div>;
 }
 
@@ -27,7 +25,6 @@ function DetailHeader(props) {
       <h2>{props.name}</h2>
       <div className={`custom-border pink`}></div>
     </div>
-
   </div>;
 }
 
@@ -46,7 +43,9 @@ function App() {
   }
   return (
     <div className="App">
-      <Header />
+      <Header onClick={() => {
+        setTalentDetail(null)
+      }} />
       <MainContent>
         {talentDetail !== null
           ? (<>
