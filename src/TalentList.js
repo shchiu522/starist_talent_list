@@ -1,4 +1,3 @@
-import arrow from './assets/arrow.svg';
 import { GENDER_FEMALE, GENDER_MALE } from "./constant";
 
 export const TalentList = (props) => {

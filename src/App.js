@@ -49,6 +49,7 @@ function App() {
   const talentOnClick = () => {
     setTalentDetail(true);
   }
+
   return (
     <div className="App">
       <Header onClick={() => {
