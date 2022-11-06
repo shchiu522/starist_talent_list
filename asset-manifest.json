@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/starist_talent_list/static/css/main.9975843c.css",
+    "main.js": "/starist_talent_list/static/js/main.1ed97522.js",
+    "static/js/787.c8fc965e.chunk.js": "/starist_talent_list/static/js/787.c8fc965e.chunk.js",
+    "static/media/starist_logo1.png": "/starist_talent_list/static/media/starist_logo1.3ef6841b3f2cd87b010f.png",
+    "static/media/AUDIO1.m4a": "/starist_talent_list/static/media/AUDIO1.3e98492a6d4c95fd6e3a.m4a",
+    "index.html": "/starist_talent_list/index.html",
+    "main.9975843c.css.map": "/starist_talent_list/static/css/main.9975843c.css.map",
+    "main.1ed97522.js.map": "/starist_talent_list/static/js/main.1ed97522.js.map",
+    "787.c8fc965e.chunk.js.map": "/starist_talent_list/static/js/787.c8fc965e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9975843c.css",
+    "static/js/main.1ed97522.js"
+  ]
+}
